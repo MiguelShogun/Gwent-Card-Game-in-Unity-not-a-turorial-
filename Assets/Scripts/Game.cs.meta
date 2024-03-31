@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: d015d369f96dbab4cbd18fa8e48674c4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - cartaPrefab: {fileID: 1011488600045107390, guid: 1116563e5639452449465350997f771c, type: 3}
+  - mano: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

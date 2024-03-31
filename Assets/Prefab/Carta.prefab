@@ -86,12 +86,12 @@ GameObject:
   - component: {fileID: 7462969134390649900}
   - component: {fileID: 7203712282569154734}
   - component: {fileID: 1983900282697696210}
-  - component: {fileID: 7345916387289210440}
-  - component: {fileID: 8402651625097595568}
-  - component: {fileID: 3411128865141191261}
   - component: {fileID: 6080554813389009108}
   - component: {fileID: 6955087883977341251}
   - component: {fileID: 8462657373107317025}
+  - component: {fileID: 2367121177316697145}
+  - component: {fileID: 7393637737016329493}
+  - component: {fileID: 1415031935355070500}
   m_Layer: 5
   m_Name: Carta
   m_TagString: Untagged
@@ -162,63 +162,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7345916387289210440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011488600045107390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ddda43838b0ce7478f81dd6456f63ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 0
-  cardName: 
-  power: 0
-  cardDescription: 
-  spriteImage: {fileID: 0}
-  type: 
---- !u!114 &8402651625097595568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011488600045107390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a6654ad84dc7ff4f8a89dd14d90bc53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayCard:
-  - {fileID: 0}
-  displayID: 1
-  id: 0
-  cardName: 
-  power: 0
-  cardDescription: 
-  spriteImage: {fileID: 0}
-  nameText: {fileID: 6261270528792320683}
-  powerText: {fileID: 1212839183956052000}
-  Description: {fileID: 2279920099014469084}
-  artImage: {fileID: 6971973747230877337}
-  cardisback: 0
-  CardInHand: {fileID: 0}
-  deckcard: 0
---- !u!114 &3411128865141191261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011488600045107390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7356448c7f7ed994ba5ae42c6ddcd873, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6080554813389009108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,33 +175,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 13
+  - eventID: 4
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 3411128865141191261}
-          m_TargetAssemblyTypeName: DragDrop, Assembly-CSharp
-          m_MethodName: OnStarDrag
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 14
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3411128865141191261}
-          m_TargetAssemblyTypeName: DragDrop, Assembly-CSharp
-          m_MethodName: OnEndDrag
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -336,6 +263,49 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &2367121177316697145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011488600045107390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ddda43838b0ce7478f81dd6456f63ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  cardName: 
+  power: 0
+  cardDescription: 
+  spriteImage: {fileID: 0}
+  type: 
+--- !u!114 &7393637737016329493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011488600045107390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab431c32b8750a5428f4afd5528c229d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1415031935355070500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011488600045107390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7356448c7f7ed994ba5ae42c6ddcd873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeZone: {fileID: 0}
 --- !u!1 &1371632674862817005
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,56 +1,76 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
-public class DragDrop : MonoBehaviour
+public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private bool m_IsDragging;
-    private bool its_over_zone;
-    GameObject dropzone;
-    private Vector2 starPosition;
+    private RectTransform rectTransform;
+    private Canvas canvas;
+    private CanvasGroup canvasGroup;
+    private Transform meleeZoneTransform;
+    private Vector2 startPosition;
+    private bool enteredMeleeZone = false;
+    private TMP_Text sumaTexto; 
+    public int Power = 0;
 
-
-    private void Update()
+    private void Awake()
     {
-        if (m_IsDragging)
+        rectTransform = GetComponent<RectTransform>();
+        canvas = GetComponentInParent<Canvas>();
+        canvasGroup = GetComponent<CanvasGroup>();
+        startPosition = rectTransform.anchoredPosition; 
+        meleeZoneTransform = GameObject.FindGameObjectWithTag("MeleeZone").transform;
+        sumaTexto = GameObject.FindGameObjectWithTag("SumaTexto").GetComponent<TMP_Text>();
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        canvasGroup.blocksRaycasts = false;
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        if (!enteredMeleeZone) 
         {
-            transform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+            rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
         }
     }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        canvasGroup.blocksRaycasts = true;
+
+        
+        if (!enteredMeleeZone)
+        {
+            rectTransform.anchoredPosition = startPosition; 
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        its_over_zone = true;
-        dropzone = collision.gameObject;
+        if (collision.gameObject.CompareTag("MeleeZone"))
+        {
+            enteredMeleeZone = true;
+            transform.SetParent(meleeZoneTransform); 
+            ActualizarSuma(Power); 
+        }
     }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
-        its_over_zone = false;
-        dropzone = null;
-    }
-    public void OnStarDrag()
-    {
-        starPosition = transform.position;
-        m_IsDragging = true;
-    }
-
-    public void OnEndDrag()
-    {
-        m_IsDragging = false;
-        if (its_over_zone)
+        if (collision.gameObject.CompareTag("MeleeZone"))
         {
-            transform.SetParent(dropzone.transform, false);
+            enteredMeleeZone = false;
         }
-        else
-        {
-            transform.position = starPosition;
-        }
-
-
     }
-
-
-
-
+    private void ActualizarSuma(int valor)
+    {
+        
+        int sumaActual = int.Parse(sumaTexto.text);
+       
+        sumaActual += valor;
+        
+        sumaTexto.text = sumaActual.ToString();
+    }
 }

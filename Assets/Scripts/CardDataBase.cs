@@ -9,9 +9,11 @@ public class CardDataBase : MonoBehaviour
 
     void Awake()
     {
-        cardList.Add(new Card(0, "none", 0, "none", Resources.Load<Sprite>("King"), ""));
-        cardList.Add(new Card(1, "Cabelleros de Leutesia", 6, "no se", Resources.Load<Sprite>("Caballeros"), "MELEE"));
-        cardList.Add(new Card(2, "Arqueria Leutesiana", 3, "Nozzzzne", Resources.Load<Sprite>("Archers"), "RANGE"));
-        cardList.Add(new Card(3, "Human", 4, "Nzzzzone", Resources.Load<Sprite>("Caballeros"), "RANGE"));
+        cardList.Add(new Card(0, "none", 0, "none", Resources.Load<Sprite>("King"), "", Card.Tipo.Melee));
+        cardList.Add(new Card(1, "Cabelleros de Leutesia", 6, "no se", Resources.Load<Sprite>("Caballeros"), "MELEE", Card.Tipo.Melee));
+        cardList.Add(new Card(2, "Arqueria Leutesiana", 3, "Nozzzzne", Resources.Load<Sprite>("Archers"), "RANGE", Card.Tipo.Distancia));
+        cardList.Add(new Card(3, "Catapulta Cromatica", 6, "dsdsd", Resources.Load<Sprite>("Catapulta"), "ASEDIO", Card.Tipo.Asedio));
+        cardList.Add(new Card(4, "Sir Leruxe", 1, "dsdsd", Resources.Load<Sprite>("espia"), "espia", Card.Tipo.Melee));
+        cardList.Add(new Card(5, "Arthur II", 10, "dsdsd", Resources.Load<Sprite>("Principe"), "Melee", Card.Tipo.Asedio));
     }
 }

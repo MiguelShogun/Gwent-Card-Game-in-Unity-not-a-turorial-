@@ -21,8 +21,8 @@ public class Draws : MonoBehaviour
     {
         for (int i = 0; i < 1; i++)
         {
-            GameObject playercar = Instantiate(carta[Random.Range(0, carta.Count)], new Vector3(0, 0, 0), Quaternion.identity);
-            playercar.transform.SetParent(handzone.transform, false);
+            GameObject playercard = Instantiate(carta[Random.Range(0, carta.Count)], new Vector3(0, 0, 0), Quaternion.identity);
+            playercard.transform.SetParent(handzone.transform, false);
         }
        
     }
