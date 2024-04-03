@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2927831734133055176
+--- !u!1001 &3493612544811873333
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -70,11 +70,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 286355548142709763, guid: 8ee770dc7d29afc49b0d241345fd1204, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -97
+      value: -693
       objectReference: {fileID: 0}
     - target: {fileID: 286355548142709763, guid: 8ee770dc7d29afc49b0d241345fd1204, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -461.65
+      value: -454.55
       objectReference: {fileID: 0}
     - target: {fileID: 286355548142709763, guid: 8ee770dc7d29afc49b0d241345fd1204, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -90,19 +90,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1196743359678709191, guid: 8ee770dc7d29afc49b0d241345fd1204, type: 3}
       propertyPath: displayID
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 1375239518405264099, guid: 8ee770dc7d29afc49b0d241345fd1204, type: 3}
-      propertyPath: Power
+    - target: {fileID: 5180232858995741891, guid: 8ee770dc7d29afc49b0d241345fd1204, type: 3}
+      propertyPath: id
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6718269013061347965, guid: 8ee770dc7d29afc49b0d241345fd1204, type: 3}
       propertyPath: m_Name
-      value: King
+      value: Barbaros
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 6472347061525298368, guid: 8ee770dc7d29afc49b0d241345fd1204, type: 3}
+    - {fileID: 1375239518405264099, guid: 8ee770dc7d29afc49b0d241345fd1204, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6718269013061347965, guid: 8ee770dc7d29afc49b0d241345fd1204, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2705543584126166815}
   m_SourcePrefab: {fileID: 100100000, guid: 8ee770dc7d29afc49b0d241345fd1204, type: 3}
+--- !u!1 &7874500019285728840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6718269013061347965, guid: 8ee770dc7d29afc49b0d241345fd1204, type: 3}
+  m_PrefabInstance: {fileID: 3493612544811873333}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2705543584126166815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7874500019285728840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 570a79e601a40d3428368c9b490d478e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Power: 8

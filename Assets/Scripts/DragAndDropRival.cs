@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DragAndDrop1 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private RectTransform rectTransform;
     private Canvas canvas;
@@ -19,10 +19,10 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
 
-        meleeZoneTransform = GameObject.FindGameObjectWithTag("MeleeZone").transform;
-        sumaTexto = GameObject.FindGameObjectWithTag("SumaTexto").GetComponent<TMP_Text>();
+        meleeZoneTransform = GameObject.FindGameObjectWithTag("MeleeZone1").transform;
+        sumaTexto = GameObject.FindGameObjectWithTag("SumaTexto1").GetComponent<TMP_Text>();
     }
-    
+
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -52,7 +52,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("MeleeZone"))
+        if (collision.gameObject.CompareTag("MeleeZone1"))
         {
             enteredMeleeZone = true;
             transform.SetParent(meleeZoneTransform);
@@ -62,7 +62,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("MeleeZone"))
+        if (collision.gameObject.CompareTag("MeleeZone1"))
         {
             enteredMeleeZone = false;
         }

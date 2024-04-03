@@ -94,9 +94,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6718269013061347965, guid: 8ee770dc7d29afc49b0d241345fd1204, type: 3}
       propertyPath: m_Name
-      value: Caballeros De Leutesia Variant
+      value: catapulta1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6472347061525298368, guid: 8ee770dc7d29afc49b0d241345fd1204, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

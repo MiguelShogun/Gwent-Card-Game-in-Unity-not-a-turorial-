@@ -88,13 +88,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1164818648024559093, guid: ca007901ca647fb4384a24395250afee, type: 3}
+      propertyPath: Power
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1415325258995847889, guid: ca007901ca647fb4384a24395250afee, type: 3}
       propertyPath: displayID
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6774407245064570219, guid: ca007901ca647fb4384a24395250afee, type: 3}
       propertyPath: m_Name
-      value: Caballeros De Leutesia Variant 1
+      value: espia
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

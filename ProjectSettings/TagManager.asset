@@ -11,6 +11,10 @@ TagManager:
   - Card
   - DropZone
   - SumaTexto
+  - Penes
+  - MeleeZone1
+  - SumaTexto1
+  - ZonaClima
   layers:
   - Default
   - TransparentFX

@@ -15,5 +15,10 @@ public class CardDataBase : MonoBehaviour
         cardList.Add(new Card(3, "Catapulta Cromatica", 6, "dsdsd", Resources.Load<Sprite>("Catapulta"), "ASEDIO", Card.Tipo.Asedio));
         cardList.Add(new Card(4, "Sir Leruxe", 1, "dsdsd", Resources.Load<Sprite>("espia"), "espia", Card.Tipo.Melee));
         cardList.Add(new Card(5, "Arthur II", 10, "dsdsd", Resources.Load<Sprite>("Principe"), "Melee", Card.Tipo.Asedio));
+        cardList.Add(new Card(6, "Barbaros Lucitanios", 6, "no se", Resources.Load<Sprite>("Barbaros"), "MELEE", Card.Tipo.Melee));
+        cardList.Add(new Card(7, "Barbaros con Arco", 3, "Nozzzzne", Resources.Load<Sprite>("BarbarianArchers"), "RANGE", Card.Tipo.Distancia));
+        cardList.Add(new Card(8, "Catapulta Cromatica", 6, "dsdsd", Resources.Load<Sprite>("Catapulta"), "ASEDIO", Card.Tipo.Asedio));
+        cardList.Add(new Card(9, "Liuzus", 10, "dsdsd", Resources.Load<Sprite>("BarbarianPrince"), "Melee", Card.Tipo.Asedio));
+
     }
 }

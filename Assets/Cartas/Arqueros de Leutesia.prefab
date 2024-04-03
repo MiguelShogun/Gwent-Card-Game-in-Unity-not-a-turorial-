@@ -92,6 +92,10 @@ PrefabInstance:
       propertyPath: displayID
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1375239518405264099, guid: 8ee770dc7d29afc49b0d241345fd1204, type: 3}
+      propertyPath: Power
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5180232858995741891, guid: 8ee770dc7d29afc49b0d241345fd1204, type: 3}
       propertyPath: textoPuntaje
       value: 
@@ -104,7 +108,8 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -134285804224923349, guid: 8ee770dc7d29afc49b0d241345fd1204, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

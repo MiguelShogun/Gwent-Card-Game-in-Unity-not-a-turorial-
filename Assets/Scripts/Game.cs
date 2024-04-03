@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -6,7 +7,12 @@ public class GameManager : MonoBehaviour
 
     public GameObject player1Hand;
     public GameObject player2Hand;
-
+    public GameObject Canvas;
+    public GameObject Button;
+    public float x;
+    public Camera mainCamera;
+    public float rotationSpeed = 5f;
+    
     private bool player1Turn = true;
 
     void Awake()
@@ -20,18 +26,39 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    public void EndTurn()
+    public void Update()
     {
-        player1Turn = !player1Turn;
-
-        
-        if (player1Turn)
+      if (player1Turn)
         {
             EnableInteractions(player1Hand);
             SetCardVisibility(player1Hand, true);
             DisableInteractions(player2Hand);
             SetCardVisibility(player2Hand, false);
+
+        }
+    }
+
+
+    public void EndTurn()
+    {
+        player1Turn = !player1Turn;
+       
+
+
+        if (player1Turn)
+        {
+
+            EnableInteractions(player1Hand);
+            SetCardVisibility(player1Hand, true);
+            DisableInteractions(player2Hand);
+            SetCardVisibility(player2Hand, false);
+           
+
+
+
+
+
+
         }
         else
         {
@@ -39,6 +66,8 @@ public class GameManager : MonoBehaviour
             SetCardVisibility(player2Hand, true);
             DisableInteractions(player1Hand);
             SetCardVisibility(player1Hand, false);
+            
+
         }
     }
 

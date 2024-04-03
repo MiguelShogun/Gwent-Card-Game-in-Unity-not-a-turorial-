@@ -1,8 +1,8 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using TMPro;
 
-public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DragAndDropClime : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private RectTransform rectTransform;
     private Canvas canvas;
@@ -19,10 +19,10 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
 
-        meleeZoneTransform = GameObject.FindGameObjectWithTag("MeleeZone").transform;
+        meleeZoneTransform = GameObject.FindGameObjectWithTag("ZonaClima").transform;
         sumaTexto = GameObject.FindGameObjectWithTag("SumaTexto").GetComponent<TMP_Text>();
     }
-    
+
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -52,33 +52,19 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("MeleeZone"))
+        if (collision.gameObject.CompareTag("ZonaClima"))
         {
             enteredMeleeZone = true;
             transform.SetParent(meleeZoneTransform);
-            ActualizarSuma1(Power);
+            //ActualizarSuma1(Power);
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("MeleeZone"))
+        if (collision.gameObject.CompareTag("ZonaClima"))
         {
             enteredMeleeZone = false;
-        }
-    }
-    private void ActualizarSuma1(int valor)
-    {
-
-        if (sumaTexto != null)
-        {
-            int sumaActual = int.Parse(sumaTexto.text);
-            sumaActual += valor;
-            sumaTexto.text = sumaActual.ToString();
-        }
-        else
-        {
-            Debug.LogError("sumaTexto is null in ActualizarSuma1()");
         }
     }
 }
